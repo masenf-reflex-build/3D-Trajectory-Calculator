@@ -43,10 +43,5 @@ def index() -> rx.Component:
     )
 
 
-app = rx.App(
-    theme=rx.theme(appearance="light"),
-    stylesheets=[
-        "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
-    ],
-)
+app = rx.App(theme=rx.theme(appearance="light"))
 app.add_page(index)

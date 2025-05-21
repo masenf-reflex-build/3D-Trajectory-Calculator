@@ -36,6 +36,7 @@ def trajectory_plot_component() -> rx.Component:
                 stroke="#4b5563",
             ),
             rx.recharts.scatter(
+                data_key="y",
                 name="Trajectory",
                 fill="#4f46e5",
                 line=True,
@@ -49,6 +50,12 @@ def trajectory_plot_component() -> rx.Component:
             ),
             data=ProjectileState.trajectory_data,
             height=450,
+            margin={
+                "left": 20,
+                "right": 20,
+                "top": 25,
+                "bottom": 20,
+            },
             class_name="bg-white p-4 rounded-lg shadow-md w-full",
         ),
         rx.el.div(
