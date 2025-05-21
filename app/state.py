@@ -20,6 +20,18 @@ class ProjectileState(rx.State):
     time_of_flight: float = 0.0
     error_message: str = ""
 
+    @rx.var
+    def max_height_str(self) -> str:
+        return f"{self.max_height:.2f}"
+
+    @rx.var
+    def total_range_str(self) -> str:
+        return f"{self.total_range:.2f}"
+
+    @rx.var
+    def time_of_flight_str(self) -> str:
+        return f"{self.time_of_flight:.2f}"
+
     @rx.event
     def handle_form_submit(self, form_data: dict):
         self.error_message = ""

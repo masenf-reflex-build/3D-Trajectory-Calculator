@@ -58,15 +58,15 @@ def trajectory_plot_component() -> rx.Component:
             ),
             rx.el.div(
                 rx.el.p(
-                    f"Max Height: {ProjectileState.max_height:.2f} m",
+                    f"Max Height: {ProjectileState.max_height_str} m",
                     class_name="text-md text-gray-700 py-1",
                 ),
                 rx.el.p(
-                    f"Total Range: {ProjectileState.total_range:.2f} m",
+                    f"Total Range: {ProjectileState.total_range_str} m",
                     class_name="text-md text-gray-700 py-1",
                 ),
                 rx.el.p(
-                    f"Time of Flight: {ProjectileState.time_of_flight:.2f} s",
+                    f"Time of Flight: {ProjectileState.time_of_flight_str} s",
                     class_name="text-md text-gray-700 py-1",
                 ),
                 class_name="mt-4 p-4 bg-gray-100 rounded-lg shadow-sm",
